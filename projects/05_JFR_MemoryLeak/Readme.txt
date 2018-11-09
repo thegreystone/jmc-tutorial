@@ -1,0 +1,91 @@
+ This application has a memory leak. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Run Leak with the auto record launcher and wait until the recording is written (8 minutes), 
+   or simply open the memoryleak_before.jfr file.
+2. Open the recording.
+3. Check out the Live Objects page.
+4. What types (instances of what types) do you think are leaking?
+5. From where are they being referenced?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+No hints here yet. Open the lab instructions for hints.

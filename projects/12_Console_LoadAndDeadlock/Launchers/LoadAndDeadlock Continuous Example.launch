@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/12_Console_LoadAndDeadlock/src/se/hirt/jmc/tutorial/console/LoadAndDeadlock.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="se.hirt.jmc.tutorial.console.LoadAndDeadlock"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="12_Console_LoadAndDeadlock"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:StartFlightRecording=name=LADRec,settings=default -XX:FlightRecorderOptions=loglevel=info"/>
+</launchConfiguration>
