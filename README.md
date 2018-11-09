@@ -79,4 +79,4 @@ To import the projects into Eclipse, create a new Workspace and simply import al
 There is a PDF in the root of this project explaining in detail how to run the JMC labs. If running the labs from within Eclipse, first ensure that you have set up an Eclipse properly, added the plug-in version of JMC, and imported the projects.
 
 ## About
-This tutorial is for learning how to use the JDK Mission Contol. It is provided under GPLv3 as is. If you find a problem, please open a ticket or feel free to provide a pull request.
+This tutorial is for learning how to use JDK Mission Contol. It is provided under GPLv3 as is. If you find a problem, please open a ticket or feel free to provide a pull request.
