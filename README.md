@@ -2,8 +2,6 @@
 
 This tutorial provides plenty of examples and material to help you learn JDK Mission Control (7+).
 
-** This is work in progress, I will not upload the lab instructions before I am done submitting my various projects. Do not use this repo until I have removed this warning! **
-
 ## Preparations
 For the HoL at CodeOne, this material is usually pre-packaged with everything you need, such as an Eclipse with the eclipse.ini file already modified. This is not practical at GitHub, so there are some preparations required before starting the HoL.
 
@@ -11,6 +9,10 @@ For the HoL at CodeOne, this material is usually pre-packaged with everything yo
 You will need to have a JDK 11 or later to do this tutorial. You can either use the [Oracle JDK](http://java.oracle.com) or any OpenJDK build, for example the one provided by [Oracle](http://jdk.java.net/11/).
 
 You will need to ensure that `java` for your JDK is on your path, and you should also make sure that your JAVA_HOME variable is set to the parent folder of the `bin` folder containing your `java` binary.
+
+### Getting the stand alone version of JMC
+The open source version of JMC has not been released yet, but early access builds can be downloaded from here:
+http://jdk.java.net/jmc/
 
 ### Setting up Eclipse
 The tutorial will be easier to run if you have an Eclipse installed. You will need an Eclipse Oxygen 4.8.0 or later. You will also need to add some VM arguments.
