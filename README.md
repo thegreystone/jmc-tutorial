@@ -3,7 +3,7 @@
 This tutorial provides plenty of examples and material to help you learn JDK Mission Control (7+).
 
 ## Preparations
-For the HoL at CodeOne, this material is usually pre-packaged with everything you need, such as an Eclipse with the eclipse.ini file already modified. This is not practical at GitHub, so there are some preparations required before starting the HoL.
+Since it is not practical to pre-package everything required to run the material here at GitHub, there are some preparations required before starting the Tutorial.
 
 ### Setting up the JDK
 You will need to have a JDK 11 or later to do this tutorial. You can either use the [Oracle JDK](http://java.oracle.com) or any OpenJDK build, for example the one provided by [Oracle](http://jdk.java.net/11/).
