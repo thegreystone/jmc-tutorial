@@ -21,13 +21,13 @@ package se.hirt.jmc.tutorial.gc;
  * The kind of object that will be in the map.
  */
 final class ExampleMapContent {
-	private final Integer id;
+	private final int id;
 
 	ExampleMapContent(int id) {
 		this.id = id;
 	}
 
-	Integer getId() {
+	int getId() {
 		return id;
 	}
 }
