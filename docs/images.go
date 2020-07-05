@@ -160,7 +160,7 @@ func (c config) dstpath(i image) string {
 
 func (c config) markdown(i image) (string, string) {
 	var ref = "![" + i.altText() + "][" + i.name + "]"
-	var link = "[" + i.name + "]: " + c.dstpath(i)
+	var link = "[" + i.name + "]: images/" + i.name + ".png"
 	return ref, link
 }
 
