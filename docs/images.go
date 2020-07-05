@@ -35,7 +35,7 @@ var images = []image{
 	newMaskedImage(16, "eclipse-import-tutorial-all-projects"),
 	newMaskedImage(18, "eclipse-workspace-projects-loaded"),
 	newMaskedImage(20, "eclipse-jmc-perspective-button-toggle"),
-	newMaskedImage(22, "eclipse-jmc-perspective-jmv-browser"),
+	newMaskedImage(22, "eclipse-jmc-perspective-jvm-browser"),
 	newMaskedImage(24, "eclipse-jmc-launch-wizard-jfr"),
 	newSimpleImage(26, "eclipse-java-perspective-button"),
 	newMaskedImage(27, "eclipse-java-perspective-button-toggle"),
