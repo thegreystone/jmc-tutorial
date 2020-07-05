@@ -1,5 +1,7 @@
 # JDK Mission Control 7.0 Tutorial
 
+![jmc logo][jmc-logo]
+
 <a id="markdown-index" name="index"></a>
 ## Index
 
@@ -125,15 +127,20 @@ folder, you will find a jmc launcher. Either double-click it or run it from the 
 line. A splash screen should show, and after a little while you should be looking at
 something like this:
 
+![jmc welcome screen][jmc-welcome-screen]
+
 The welcome screen provides guidance and documentation for the different tools in
 JDK Mission Control. Since you have this tutorial, you can safely close the welcome
 screen.
 
+![jmc welcome screen close][jmc-welcome-screen-close]
 
 Closing the welcome screen will show the basic JDK Mission Control environment.
 The view (window) to the left is the JVM Browser. It will normally contain the
 automatically discovered JVMs, such as locally running JVMs and JVMs discovered
 on the network.
+
+![jmc start screen][jmc-start-screen]
 
 To the bottom left is the Properties view, showing properties for anything selected in
 the editor.
@@ -164,6 +171,8 @@ of the GitHub repository to the letter, and that the JMC plug-ins are installed 
 start Eclipse and switch to the Java perspective. You should now see something
 looking somewhat like below:
 
+![eclipse java perspective][eclipse-java-perspective]
+
 First we will need to verify that the JDK 11 runtime is properly configured and
 available for Eclipse to use.
 
@@ -172,6 +181,7 @@ available for Eclipse to use.
 2. In the filter box in the upper left of the Preferences dialog, type JRE, then
     select Installed JREs.
 
+![eclipse preferences installed jres][eclipse-preferences-installed-jres]
 
 3. If you already have various JDKs installed, they may already show up here. If
     they don’t, click add to add them. There is a JDK 11 provided in the HoL zip.
@@ -185,6 +195,8 @@ should browse to the <JDK>/Contents/Home folder.
 
 5. Ensure that your execution environments are correctly mapped for JDK 8.
 
+![eclipse preferences execution environments][eclipse-preferences-execution-environments]
+
 ```
 Don’t forget to click Apply and Close when done.
 ```
@@ -192,19 +204,27 @@ Next we will have to import the projects with all the examples into the workspac
 
 1. Select File | Import... from the menu.
 2. In the Import dialog, select Existing Projects into Workspace and hit Next.
-3. Browse to the projects folder in the root tutorial folder and click Open.
 
+![eclipse import existing projects][eclipse-import-existing-projects]
+
+3. Browse to the projects folder in the root tutorial folder and click Open.
 
 4. Select all projects and click Finish.
 
+![eclipse import tutorial all projects][eclipse-import-tutorial-all-projects]
+
 
 You should now see something similar to the following:
+
+![eclipse workspace projects loaded][eclipse-workspace-projects-loaded]
 
 To the left the projects for the different exercises can be seen. In Eclipse a
 configuration of views is called a perspective. There is a special perspective
 optimized for working with JMC, called the JDK Mission Control perspective. To
 open the JDK Mission Control Perspective, click the Mission Control perspective in
 the upper right corner of Eclipse.
+
+![eclipse jmc perspective button toggle][eclipse-jmc-perspective-button-toggle]
 
 In this tutorial, you will be constantly switching between the Java perspective, to look
 at code and to open flight recordings, and the Mission Control perspective, to access
@@ -214,17 +234,21 @@ As can be seen from the picture below, the JVM running Eclipse (and thus JDK
 Mission Control) will be named The JVM Running Mission Control, just like in the
 stand-alone version of JDK Mission Control.
 
+![eclipse jmc perspective jvm browser][eclipse-jmc-perspective-jvm-browser]
+
 
 Launching the tools work exactly the same as in the stand-alone version. Either use
 the context menu of the JVM that you wish to launch the tool on, or click the Mission
 Control button on the toolbar to launch a Wizard.
 
+![eclipse jmc launch wizard jfr][eclipse-jmc-launch-wizard-jfr]
 
-The Java perspective is the perspective with a little J on the icon ( ):
+The Java perspective is the perspective with a little J on the icon:
+
+![eclipse java perspective button toggle][eclipse-java-perspective-button-toggle]
 
 Go back to the Java perspective, so that you can see the projects in the Package
 Explorer view again.
-
 
 <a id="markdown-the-jdk-flight-recorder" name="the-jdk-flight-recorder"></a>
 ## The JDK Flight Recorder
@@ -249,13 +273,14 @@ Recordings. Next start the DoNothing program by right clicking on the
 **DoNothing.launch** file in the **Launchers** folder of the 01_DoNothing project,
 as show below.
 
+![eclipse run do nothing program][eclipse-run-do-nothing-program]
+
 Note: _There are “Auto Record” versions of most launchers, which will launch the_
 application and automatically create a recording in the **_autorecordings_** folder in
 the tutorial root. This is since, in certain environments (slow machines running a
 virtualized Windows for example), the highly loaded JVM that JMC is trying to
 communicate with will take so long to getting around to communicate with JMC that
 it simply is no fun to wait. _If that is the case, simply run the “Auto” launchers._ Or,
-
 
 you know, if _you’re lazy. I will not judge._ Just try doing this first exercise without
 Auto, as it is about doing recordings from JMC.
@@ -273,19 +298,23 @@ Next select the template you want to use when recording. The template describes 
 configuration to use for the different event types. Select the Profiling – on Server
 template, and hit Finish to start the recording.
 
+![eclipse jmc start flight recording][eclipse-jmc-start-flight-recording]
 
 The progress of the recording can be seen in the JVM Browser, when the Flight
 Recorder node is expanded. It can also be seen in the status bar.
+
+![eclipse jmc jvm browser flight recorder node expanded][eclipse-jmc-jvm-browser-flight-recorder-node-expanded]
 
 Use the minute to contemplate intriguing suggestions for how to improve Mission
 Control (don’t forget to e-mail them to marcus.hirt@oracle.com), get a coffee, or read
 ahead in the tutorial.
 
-
 Once the recording is done, it will be downloaded to your Mission Control client, and
 opened. Switch to the JDK Mission Control perspective.
 
 You should be looking at the automated analysis of the recording.
+
+![eclipse jmc automated recording analysis do nothing][eclipse-jmc-automated-recording-analysis-do-nothing]
 
 This exercise is just to familiarize you with one of the ways to create a flight
 recording. This will be a rather boring recording, in terms of results from the
@@ -303,6 +332,8 @@ laptop:
 The Outline view shows the various pages in the JDK Flight Recorder user interface.
 Select Java Application.
 
+![eclipse jmc application outline view do nothing][eclipse-jmc-application-outline-view-do-nothing]
+
 
 Here we get an overview of commonly interesting properties of the recording. This
 process didn’t do much, but we can see that what little it did was spent transferring
@@ -314,14 +345,17 @@ the DoNothing application.
 
 - Either go to the Java perspective and hit enter in the Console view,
 
+![eclipse java perspective console view][eclipse-java-perspective-console-view]
 
-- ... or go the Debug perspective, find the LoadAndDeadlock process and click
-    the Terminate button
+- ... or go the Debug perspective, find the LoadAndDeadlock process and click the Terminate button
+
+![eclipse debug perspective terminate][eclipse-debug-perspective-terminate]
 
 Note: Also, remember to close the recording editor window when you are done with a
 recording. Recordings contain a lot of information and can consequently use a lot of
 memory.
 
+![eclipse close recording window][eclipse-close-recording-window]
 
 <a id="markdown-exercise-2b--hot-methods" name="exercise-2b--hot-methods"></a>
 ### Exercise 2b – Hot Methods
@@ -339,6 +373,8 @@ Open the 02_JFR_HotMethods/hotmethods_before.jfr recording.
 Note: Switch to the Java perspective and open (double click) the recording in the
 02_JFR_HotMethods project named hotmethods_before.jfr.
 
+![eclipse jmc automated recording analysis hotmethods][eclipse-jmc-automated-recording-analysis-hotmethods]
+
 Switch back to the JDK Mission Control perspective once the recording is open. Even
 though you will be able to see the automated analysis page directly in the Java
 Perspective, the JDK Mission Control places the support views needed to effectively
@@ -352,6 +388,7 @@ methods.
 Since there is apparently interesting information in the Java Application tab, click on
 the Java Application header in the Automated Analysis Results page.
 
+![eclipse jmc application outline view hotmethods][eclipse-jmc-application-outline-view-hotmethods]
 
 Next click on the Profiling lane. The stack trace view will show the aggregated stack
 traces of any selection in the editor. It will now show you the stack traces for the
@@ -371,6 +408,7 @@ that you can affect.
 There is another page, Method Profiling, that makes it easy to break down the method
 profiling samples per package and class of where the sample was captured.
 
+![eclipse jmc method profiling hotmethods][eclipse-jmc-method-profiling-hotmethods]
 
 In the stack trace view, the most commonly traveled path is shown by default,
 effectively giving you the most common stack trace directly. Wherever the path
@@ -378,13 +416,18 @@ branches, there is a branch icon ( , ). You can use the right and left arrow key
 select between the different branches (Frame Groups), or use the toolbar buttons
 ( , ):
 
+![eclipse jmc stacktrace next frame group][eclipse-jmc-stacktrace-next-frame-group]
 
 If you would rather use a tree representation, and see the aggregation done from the
 thread roots, this can also be done:
 
+![eclipse jmc stacktrace tree][eclipse-jmc-stacktrace-tree]
+
 Note that there are no line numbers in the last screenshot. You can select at what
 granularity to distinguish the frames from each other, in effect grouping frames
 together. This is controlled from the context menu:
+
+![eclipse jmc stacktrace line numbers][eclipse-jmc-stacktrace-line-numbers]
 
 Using Method will often be a helpful tool to declutter the view.
 
@@ -425,10 +468,13 @@ Open the **03_JFR_Latencies/latency_before.jfr** recording (same
 procedure as when opening the hotmethods_before.jfr recording in the previous
 exercise). Then switch back to the Mission Control perspective.
 
+![eclipse jmc analysis offending monitor][eclipse-jmc-analysis-offending-monitor]
+
 From the rule result our threads seem to be waiting a lot to enter a java monitor. We
 can already see what monitor class seems responsible. Click the suggested Lock
 Instances page to take a closer look.
 
+![eclipse jmc lock instances page][eclipse-jmc-lock-instances-page]
 
 Of what class is the lock we’re blocking on? From where in the code is that event
 originating?
@@ -453,6 +499,8 @@ synchronized.
 Note: The events can also be visualized directly in the Java Application view. Select
 all worker threads.
 
+![eclipse jmc latency before view all threads][eclipse-jmc-latency-before-view-all-threads]
+
 Note: More hints in the Readme.txt document in the project.
 
 In the latency_fixed.jfr recording we simply removed the synchronized keyword from
@@ -460,6 +508,7 @@ the Logger.log(String) method. Can you see any difference to the other
 recording? Are the threads getting to run more or less than before? Are we getting
 better throughput now? How many threads are stalling now?
 
+![eclipse jmc latency fixed][eclipse-jmc-latency-fixed]
 
 Note: You can compare recordings side by side by dragging and docking the editors
 that contain them in the standard Eclipse way.
@@ -471,6 +520,8 @@ custom Work events). In the latency_before.jfr recording only one thread is runn
 any given time, the rest are waiting. In the latency_fixed.jfr recording, they are
 happily running in parallel. Also, no salmon-colored Java Monitor Blocked events
 can be seen at all.
+
+![eclipse jmc latency fixed all threads][eclipse-jmc-latency-fixed-all-threads]
 
 The moral of this exercise is that bad synchronization can and will kill the
 performance and responsiveness of your application.
@@ -497,6 +548,8 @@ Note: the charts can be zoomed with the mouse scroll wheel or with the key butto
 sure the chart panel is selected, for example by clicking on the x-axis underneath the
 charts.
 
+![eclipse jmc garbage collection][eclipse-jmc-garbage-collection]
+
 It does not seem like there is anything special, like the handling of special reference
 types, causing garbage collections to take an unreasonably long time, not to mention
 that the garbage collections are pretty short. We are simply creating quite large
@@ -505,6 +558,7 @@ amounts of garbage.
 Go to the Memory page. What kind of allocations (what class of objects) seems to be
 causing the most pressure on the memory system? From where are they allocated?
 
+![eclipse jmc memory page][eclipse-jmc-memory-page]
 
 Note: Jump to the first method in the trace that you think you can easily alter.
 
@@ -594,6 +648,8 @@ Select an old object sample somewhere in the middle of the interval.
 
 JMC- 6127 is currently being fixed – instead look at the full interval.
 
+![eclipse jmc jfr memory live objects][eclipse-jmc-jfr-memory-live-objects]
+
 - Can you tell when it was allocated?
 - Can you tell where it is being held on to?
 - Looking at the source, can you figure out how to fix the problem?
@@ -617,9 +673,12 @@ from the standard flight recorder events, events contributed by WLDF.
 Open the WebLogic / JDBC Operations page. Can you tell which JDBC query took
 the longest time? How long did it take?
 
+![eclipse jmc jfr jdbc][eclipse-jmc-jfr-jdbc]
 
 Open the WebLogic / Servlet Invocation by URI page. Can you tell which invocation
 of the viewPatients servlet took the longest time? How long did it take?
+
+![eclipse jmc jfr weblogic servlet][eclipse-jmc-jfr-weblogic-servlet]
 
 Let’s take a look at everything that was going on during that request. Select the
 longest lasting viewPatients servlet, and select the ECID (Execution Context ID) in
@@ -630,12 +689,15 @@ ID.
 
 Select Store and set as focused selection from the context menu.
 
+![eclipse jmc jfr weblogic servlet focused selection][eclipse-jmc-jfr-weblogic-servlet-focused-selection]
+
 This will focus the user interface on events with the property value of that ECID.
 Open the Java Application page.
 
-
 The selection box at the top shows that we are now looking at events matching our
 selection.
+
+![eclipse jmc jfr weblogic events matching selection][eclipse-jmc-jfr-weblogic-events-matching-selection]
 
 Also note that we can select other aspects of the selection to determine what the UI
 shows. Some pages may only be able to act on certain aspects of a selection. If the
@@ -658,6 +720,8 @@ Type. With our selection settings, we will now see the same events listed. Selec
 an event will show the properties for the selected event in the Properties view.
 Selecting multiple events will show the common properties for the selection. As
 shown before, the properties can be used to establish new selections.
+
+![eclipse jmc jfr weblogic event browser][eclipse-jmc-jfr-weblogic-event-browser]
 
 Deep Dive Exercises:
 
@@ -686,6 +750,8 @@ In this exercise, we will explore the Java FX integration with JDK Flight Record
 Use the GUIMark launcher to launch the GUIMark Bitmap benchmark application.
 You should see a tower shooting a laser at monsters.
 
+![javafx application lasers][javafx-application-lasers]
+
 We will use a pre-recorded recording for this exercise,
 **06_JFR_JavaFX/guimark.jfr** , so you starting GUIMark was mostly pointless.
 But, come on – lasers? Monsters? It had to be seen.
@@ -695,10 +761,14 @@ GUIMark Auto Record launcher. If you insist on not using the auto recording
 launcher, make sure to enable the JavaFX events in the recording wizard, or import
 the template in the project folder.
 
+![eclipse jmc jfr javafx][eclipse-jmc-jfr-javafx]
+
 
 Try looking at the recording using the special Java FX page. Can you tell which pulse
 took the longest time (disregard the weird pulse 0)? What phase was the one that took
 the longest for that particular pulse? Which was the input event that took the longest?
+
+![eclipse jmc jfr javafx pulse][eclipse-jmc-jfr-javafx-pulse]
 
 <a id="markdown-exercise-8-bonus--exceptions" name="exercise-8-bonus--exceptions"></a>
 ### Exercise 8 (Bonus) – Exceptions
@@ -716,6 +786,8 @@ project.
 
 The automated analysis should indicate that things could be better:
 
+![eclipse jmc jfr automated analysis exceptions][eclipse-jmc-jfr-automated-analysis-exceptions]
+
 Click on the Exceptions header above the rule result (or the Exceptions page in the
 Outline) to go to the Exceptions page.
 
@@ -723,10 +795,12 @@ Outline) to go to the Exceptions page.
 Can you tell how many exceptions were thrown? Where did the exceptions originate
 in code?
 
+![eclipse jmc jfr exceptions page][eclipse-jmc-jfr-exceptions-page]
 
 Note: Click the exception class you want stack traces for. You can also select multiple
 classes to see the aggregate traces for all classes in the selection.
 
+![eclipse jmc jfr exceptions stacktrace][eclipse-jmc-jfr-exceptions-stacktrace]
 
 Can you tell exactly where the Scary exceptions are originating? In what threads are
 they originating? Can you study the time line for the exceptions in just one of the
@@ -736,17 +810,24 @@ Note: Either go back to the Java Application page class, sort on Throwables in t
 thread table, and pick a Thread and select Store and Set As Focused Selection then
 go back to the Exceptions page:
 
+![eclipse jmc jfr exceptions selection][eclipse-jmc-jfr-exceptions-selection]
+
 _..._ or pick an event in the Event Log directly on the Exceptions page, then select the
 Thread in the Properties view and use Store and Set As Focused Selection from the
 context menu:
 
+![eclipse jmc jfr exceptions selection 2][eclipse-jmc-jfr-exceptions-selection-2]
 
 Once a single thread has been selected, try zooming in the graph and switch between
 the two types of events, one each and both simultanously. Can you see a pattern?
 
+![eclipse jmc jfr exceptions selection zoom
+in][eclipse-jmc-jfr-exceptions-selection-zoom-in]
+
+![eclipse jmc jfr exceptions event bucket][eclipse-jmc-jfr-exceptions-event-bucket]
+
 Note: Zoom until you can distinguish individual event buckets (the y-axis is showing
 1).
-
 
 <a id="markdown-exercise-9--custom-events-in-jdk-9-bonus" name="exercise-9--custom-events-in-jdk-9-bonus"></a>
 ### Exercise 9 – Custom Events in JDK 9 (Bonus)
@@ -771,9 +852,12 @@ few minutes and then dump it, or go with the pre-recorded recording present in t
 Open the Threads view. Sort on Thread Groups and shift-click to select the two
 threads in the Fibonacci thread group:
 
+![eclipse jmc jfr fibonacci threads][eclipse-jmc-jfr-fibonacci-threads]
 
 Right click on the graph and enable the viewing of other event types in a separate lane
 per thread:
+
+![eclipse jmc jfr fibonacci threads other event types][eclipse-jmc-jfr-fibonacci-threads-other-event-types]
 
 You can now hover over the events to see what they contain.
 
@@ -845,15 +929,20 @@ found at the experimental update site (look for it at [http://oracle.com/mission
 
 Press ctrl-n (or click the File | New | Other... menu) to bring up the New wizard.
 
+![eclipse plugin project wizard][eclipse-plugin-project-wizard]
 
 Select Plug-in Project and hit Next. Name your rule project something exciting.
 
+![eclipse plugin project window][eclipse-plugin-project-window]
 
 Unccheck that this plug-in will make contributions to the UI and hit Next.
 
+![eclipse plugin project no ui contribution][eclipse-plugin-project-no-ui-contribution]
 
 Next select the Simple JFR Rule Wizard and click Finish (or Next, if you really wish
 to do some further customizations).
+
+![eclipse plugin project simple jfr rule][eclipse-plugin-project-simple-jfr-rule]
 
 You will now have a new project in your workspace. Open up the project and study
 the source of the rule. Can you see what it does?
@@ -862,18 +951,23 @@ the source of the rule. Can you see what it does?
 Go to the Run Configurations and check out the Idle launcher. In the Environment tab
 you can set up an environment variable. Launch the Idle launcher by hitting Run.
 
+![eclipse run configurations application idle][eclipse-run-configurations-application-idle]
 
 Next launch a JMC with your rule running by launching JMC with Workspace Plug-
 ins.
 
+![eclipse jmc launch with workspace plugins][eclipse-jmc-launch-with-workspace-plugins]
 
 If you get a validation complaint, it will be about localization – simply click Continue.
 In the JDK Mission Control client that now starts, find your Idle program and make a
 short (3s or so) recording with the default profiling template.
 
+![eclipse jmc jfr recording idle][eclipse-jmc-jfr-recording-idle]
+
 Depending on the value you set the environment variable to, you should now see your
 rule triggering:
 
+![eclipse jmc custom rule triggering][eclipse-jmc-custom-rule-triggering]
 
 <a id="markdown-exporting-the-rule" name="exporting-the-rule"></a>
 #### Exporting the rule
@@ -881,6 +975,8 @@ rule triggering:
 The rule can be exported and shared with others. To export it, simply right click on
 the rule project and select Export.... In the Export wizard, type Depl in the filter box,
 and select Deployable plug-ins and fragments.
+
+![eclipse plugin project export rule][eclipse-plugin-project-export-rule]
 
 Hit Next, select a destination directory and click Finish. The resulting plug-in can
 either be dropped in a JMC dropins folder
@@ -914,16 +1010,23 @@ by going to the Event Browser page. Use the filter box to quickly find the Servl
 Request Run event type, and then use the context menu to create a new page using
 the selected event type.
 
+![eclipse jmc custom pages][eclipse-jmc-custom-pages]
 
 Right click on the name of the new page, and name it “Long Lasting Servlets”:
 
+![eclipse jmc rename custom page][eclipse-jmc-rename-custom-page]
+
 Add a new attribute filter on Duration:
 
+![eclipse jmc custom page filter duration][eclipse-jmc-custom-page-filter-duration]
 
 And set it to > 2 seconds:
 
+![eclipse jmc custom page filter duration threshold][eclipse-jmc-custom-page-filter-duration-threshold]
+
 Now we have a custom page showing the longest lasting servlet requests:
 
+![eclipse jmc custom page view][eclipse-jmc-custom-page-view]
 
 <a id="markdown-grouping" name="grouping"></a>
 #### Grouping
@@ -932,22 +1035,28 @@ In the custom page, events can also be grouped. Create a new page, using the Ser
 Request Run event again. Name the page Request Log. Add a new filter from
 attribute, this time ECID. Select isn’t null as the predicate relation.
 
+![eclipse jmc request log ecid grouping][eclipse-jmc-request-log-ecid-grouping]
 
 Now remove the Type filter:
 
+![eclipse jmc request log remove type filter][eclipse-jmc-request-log-remove-type-filter]
 
 Use the context menu in the table to group by ECID:
 
+![eclipse jmc request log context menu group by ecid][eclipse-jmc-request-log-context-menu-group-by-ecid]
 
 Add a column for the longest duration in the ECID table:
+
+![eclipse jmc request log add column][eclipse-jmc-request-log-add-column]
 
 Next sort the ECID table on the Longest Duration column. Select the longest lasting
 ECID, and next sort the List, which will now show all events with the ECID selected
 in the ECID table, on Start Time.
 
-
 After some time rearranging the columns in the List to your liking, you should now
 have a nice Log of what was happening, in Start time order, for any ECID you select.
+
+![eclipse jmc request log view][eclipse-jmc-request-log-view]
 
 <a id="markdown-boolean-filter-operations" name="boolean-filter-operations"></a>
 #### Boolean Filter Operations
@@ -963,9 +1072,12 @@ to create the new page. Name the new page Log4J Contention.
 Use the context menu in the List table to show the search box. (This is available in all
 tables.)
 
+![eclipse jmc log4j contention show search][eclipse-jmc-log4j-contention-show-search]
 
 In the search box, type log4j, then select one of the events. Next add a filter from the
 attribute Monitor Class.
+
+![eclipse jmc log4j contention add filter][eclipse-jmc-log4j-contention-add-filter]
 
 The log4j class should automatically be added for you. Disable the search from the
 context menu in the List table by using the context menu.
@@ -973,6 +1085,7 @@ context menu in the List table by using the context menu.
 Add a new filter from the attribute Duration. Set the filter predicate to be more than
 400 ms.
 
+![eclipse jmc log4j contention combine filter][eclipse-jmc-log4j-contention-combine-filter]
 
 Select the Monitor Class filter and the Duration filter both, and select Combine with
 AND from the context menu. Next add a filter for Monitor Class !=
@@ -983,9 +1096,11 @@ Note: There is a bug (fixed in JMC 7) that makes applying AND/OR filters sometim
 not immediately evaluate the expression. If that happens, try clicking in the list or
 select another page and return.
 
+![eclipse jmc log4j contention bug][eclipse-jmc-log4j-contention-bug]
 
 Adding grouping on monitor address would yield something like this:
 
+![eclipse jmc log4j contention add grouping][eclipse-jmc-log4j-contention-add-grouping]
 
 <a id="markdown-the-management-console-bonus" name="the-management-console-bonus"></a>
 ## The Management Console (Bonus)
@@ -1007,6 +1122,8 @@ Browser and double clicking on the MBean Server.
 You should now be at the Overview tab of the Management Console. You should see
 something similar to the picture below:
 
+![eclipse jmc management console][eclipse-jmc-management-console]
+
 In the overview tab you can remove charts, add new charts, add attributes to the
 charts, plot other attributes in the velocimeters, log the information in the charts to
 disk, freeze the charts to look at specific values, zoom and more.
@@ -1015,15 +1132,17 @@ disk, freeze the charts to look at specific values, zoom and more.
 Click on the Add chart button in the upper right corner of the console. This will add a
 new blank chart to JMC.
 
+![eclipse jmc management console blank chart][eclipse-jmc-management-console-blank-chart]
 
 Click the Add... button of the new chart. In the attribute selector dialog, go to the
 Filter text field and enter “Th” (without quotation marks). Select the ThreadCount
 attribute, and press ok. You should now see the thread count.
 
+![eclipse jmc management console thread count][eclipse-jmc-management-console-thread-count]
+
 Note: You can use the context menu in the attribute list to change the color of the
 thread count graph. To change the titles in the chart, use the context menu of the
 chart.
-
 
 Deep Dive exercises:
 
@@ -1031,6 +1150,9 @@ Deep Dive exercises:
 16. Sometimes it can be hard to read the precise value in a chart. Freeze the graph
     and hover with the pointer over the thread count graph for a little while. What
     is your exact thread count?
+
+![eclipse jmc thread count freeze graph][eclipse-jmc-thread-count-freeze-graph]
+
 17. You decide that you dislike the live set attribute and warm up a bit to the
     Thread Count attribute. Remove the Live Set velocimeter in the upper right
     corner of the Overview tab, and instead add one for the Thread Count attribute.
@@ -1047,6 +1169,7 @@ to the MBean browser by clicking the MBean Browser tab.
 
 What is the current garbage collection strategy for the old generation?
 
+![eclipse jmc mbean browser][eclipse-jmc-mbean-browser]
 
 Note: Go to the java.lang domain, select the proper memory pool MBean and look for
 the MemoryManagerNames attribute in the Attribute table.
@@ -1057,6 +1180,8 @@ yet another chart on the Overview tab. Right click on the attribute, select **Vi
 Select Add new chart and click OK. Go back to the Overview tab and enjoy the
 Dual ThreadCount Plotting Experience™ for a brief moment. Then reset the user
 interface by clicking the Reset to Default Controls button in the upper right corner.
+
+![eclipse jmc reset to default controls][eclipse-jmc-reset-to-default-controls]
 
 Note: In JMC, charts must contain values of the same content type. That is the reason
 why you cannot plot the ThreadCount attribute in the same chart as, say, the Memory
@@ -1099,6 +1224,8 @@ interrupted by constant table refreshes.
 What are the names of the deadlocked threads? In which method and on what line are
 they deadlocked?
 
+![eclipse jmc thread graph deadlocked][eclipse-jmc-thread-graph-deadlocked]
+
 Note: In most tables in Mission Control, there are columns that are not visualized by
 default. The visibility can be changed from the context menu in the table.
 
@@ -1116,6 +1243,8 @@ Deep Dive Exercises:
 Let’s set up a trigger that alerts us when the CPU load is above a certain value. Go to
 the Triggers tab. Click the Add... button. Select the **ProcessCPULoad** attribute and
 hit Next.
+
+![eclipse jmc add trigger][eclipse-jmc-add-trigger]
 
 Select the Max trigger value to be 0. 3 (30%). And set the limit to once per second.
 Click Next.
@@ -1135,6 +1264,7 @@ of the computationally intense cycles to happen. The Alert dialog should appear 
 show you details about the particular event. If that isn’t enough to generate the
 necessary CPU load, try resizing Eclipse like crazy for more than a second.
 
+![eclipse jmc trigger alerts][eclipse-jmc-trigger-alerts]
 
 Disable or remove the rule when done to avoid getting more notifications.
 
@@ -1152,6 +1282,8 @@ it has already been installed into the Eclipse lab environment.
 Open the file 11_JOverflow/jmc41dump.hprof by double clicking on it. This is a
 dump from an earlier version of Mission Control, which traded quite a lot of memory
 for a dubious performance gain in the JMX Console.
+
+![eclipse jmc joverflow][eclipse-jmc-joverflow]
 
 JOverflow will open, and show the contents of the heapdump. There are four
 quadrants in the JOverflow user interface. Also notice the little reset button in the
@@ -1176,6 +1308,8 @@ selections in the Referrer table-tree is to right click in the table. This is si
 make multiple consecutive selections to arrive at the reference chain you are
 interested in.
 
+![eclipse jmc referer tree][eclipse-jmc-referer-tree]
+
 ```
 (Screenshot showing multiple available paths to select from)
 ```
@@ -1186,6 +1320,7 @@ The lower left shows a class histogram for whatever is selected, allowing you to
 on class. If you want to reset your selection, click the button representing the selection
 you have made.
 
+![eclipse jmc reset class histogram][eclipse-jmc-reset-class-histogram]
 
 <a id="markdown-ancestor-referrer" name="ancestor-referrer"></a>
 ### Ancestor referrer
@@ -1194,6 +1329,8 @@ The final table, in the lower right, will show the objects grouped by the closes
 ancestor referrer. It provides a pie chart to show the memory distribution, and filter
 box, making it easy to home in on to instances of classes belonging to specific
 packages.
+
+![eclipse jmc ancestor referer][eclipse-jmc-ancestor-referer]
 
 Note: it is possible to directly select a piece in the pie chart.
 
@@ -1293,3 +1430,100 @@ Marcus Hirt’s JDK Mission Control articles:
 
 Marcus Hirt’s twitter account:
 [http://twitter.com/hirt](http://twitter.com/hirt)
+
+[jmc-logo]: images/jmc-logo.png
+[jmc-welcome-screen]: images/jmc-welcome-screen.png
+[jmc-welcome-screen-close]: images/jmc-welcome-screen-close.png
+[jmc-start-screen]: images/jmc-start-screen.png
+[eclipse-java-perspective]: images/eclipse-java-perspective.png
+[eclipse-preferences-installed-jres]: images/eclipse-preferences-installed-jres.png
+[eclipse-preferences-execution-environments]: images/eclipse-preferences-execution-environments.png
+[eclipse-import-existing-projects]: images/eclipse-import-existing-projects.png
+[eclipse-import-tutorial-all-projects]: images/eclipse-import-tutorial-all-projects.png
+[eclipse-workspace-projects-loaded]: images/eclipse-workspace-projects-loaded.png
+[eclipse-jmc-perspective-button-toggle]: images/eclipse-jmc-perspective-button-toggle.png
+[eclipse-jmc-perspective-jvm-browser]: images/eclipse-jmc-perspective-jvm-browser.png
+[eclipse-jmc-launch-wizard-jfr]: images/eclipse-jmc-launch-wizard-jfr.png
+[eclipse-java-perspective-button]: images/eclipse-java-perspective-button.png
+[eclipse-java-perspective-button-toggle]: images/eclipse-java-perspective-button-toggle.png
+[eclipse-run-do-nothing-program]: images/eclipse-run-do-nothing-program.png
+[eclipse-jmc-start-flight-recording]: images/eclipse-jmc-start-flight-recording.png
+[eclipse-jmc-jvm-browser-flight-recorder-node-expanded]: images/eclipse-jmc-jvm-browser-flight-recorder-node-expanded.png
+[eclipse-jmc-automated-recording-analysis-do-nothing]: images/eclipse-jmc-automated-recording-analysis-do-nothing.png
+[eclipse-jmc-application-outline-view-do-nothing]: images/eclipse-jmc-application-outline-view-do-nothing.png
+[eclipse-java-perspective-console-view]: images/eclipse-java-perspective-console-view.png
+[eclipse-debug-perspective-terminate]: images/eclipse-debug-perspective-terminate.png
+[eclipse-close-recording-window]: images/eclipse-close-recording-window.png
+[eclipse-jmc-automated-recording-analysis-hotmethods]: images/eclipse-jmc-automated-recording-analysis-hotmethods.png
+[eclipse-jmc-application-outline-view-hotmethods]: images/eclipse-jmc-application-outline-view-hotmethods.png
+[eclipse-jmc-method-profiling-hotmethods]: images/eclipse-jmc-method-profiling-hotmethods.png
+[branch-icon-0]: images/branch-icon-0.png
+[branch-icon-1]: images/branch-icon-1.png
+[branch-icon-2]: images/branch-icon-2.png
+[branch-icon-3]: images/branch-icon-3.png
+[eclipse-jmc-stacktrace-next-frame-group]: images/eclipse-jmc-stacktrace-next-frame-group.png
+[eclipse-jmc-stacktrace-tree]: images/eclipse-jmc-stacktrace-tree.png
+[eclipse-jmc-stacktrace-line-numbers]: images/eclipse-jmc-stacktrace-line-numbers.png
+[eclipse-jmc-analysis-offending-monitor]: images/eclipse-jmc-analysis-offending-monitor.png
+[eclipse-jmc-lock-instances-page]: images/eclipse-jmc-lock-instances-page.png
+[eclipse-jmc-latency-before-view-all-threads]: images/eclipse-jmc-latency-before-view-all-threads.png
+[eclipse-jmc-latency-fixed]: images/eclipse-jmc-latency-fixed.png
+[eclipse-jmc-latency-fixed-all-threads]: images/eclipse-jmc-latency-fixed-all-threads.png
+[eclipse-jmc-garbage-collection]: images/eclipse-jmc-garbage-collection.png
+[eclipse-jmc-memory-page]: images/eclipse-jmc-memory-page.png
+[eclipse-jmc-jfr-memory-live-objects]: images/eclipse-jmc-jfr-memory-live-objects.png
+[eclipse-jmc-jfr-jdbc]: images/eclipse-jmc-jfr-jdbc.png
+[eclipse-jmc-jfr-weblogic-servlet]: images/eclipse-jmc-jfr-weblogic-servlet.png
+[eclipse-jmc-jfr-weblogic-servlet-focused-selection]: images/eclipse-jmc-jfr-weblogic-servlet-focused-selection.png
+[eclipse-jmc-jfr-weblogic-events-matching-selection]: images/eclipse-jmc-jfr-weblogic-events-matching-selection.png
+[eclipse-jmc-jfr-weblogic-event-browser]: images/eclipse-jmc-jfr-weblogic-event-browser.png
+[javafx-application-lasers]: images/javafx-application-lasers.png
+[eclipse-jmc-jfr-javafx]: images/eclipse-jmc-jfr-javafx.png
+[eclipse-jmc-jfr-javafx-pulse]: images/eclipse-jmc-jfr-javafx-pulse.png
+[eclipse-jmc-jfr-automated-analysis-exceptions]: images/eclipse-jmc-jfr-automated-analysis-exceptions.png
+[eclipse-jmc-jfr-exceptions-page]: images/eclipse-jmc-jfr-exceptions-page.png
+[eclipse-jmc-jfr-exceptions-stacktrace]: images/eclipse-jmc-jfr-exceptions-stacktrace.png
+[eclipse-jmc-jfr-exceptions-selection]: images/eclipse-jmc-jfr-exceptions-selection.png
+[eclipse-jmc-jfr-exceptions-selection-2]: images/eclipse-jmc-jfr-exceptions-selection-2.png
+[eclipse-jmc-jfr-exceptions-selection-zoom-in]: images/eclipse-jmc-jfr-exceptions-selection-zoom-in.png
+[eclipse-jmc-jfr-exceptions-event-bucket]: images/eclipse-jmc-jfr-exceptions-event-bucket.png
+[eclipse-jmc-jfr-fibonacci-threads]: images/eclipse-jmc-jfr-fibonacci-threads.png
+[eclipse-jmc-jfr-fibonacci-threads-other-event-types]: images/eclipse-jmc-jfr-fibonacci-threads-other-event-types.png
+[eclipse-plugin-project-wizard]: images/eclipse-plugin-project-wizard.png
+[eclipse-plugin-project-window]: images/eclipse-plugin-project-window.png
+[eclipse-plugin-project-no-ui-contribution]: images/eclipse-plugin-project-no-ui-contribution.png
+[eclipse-plugin-project-simple-jfr-rule]: images/eclipse-plugin-project-simple-jfr-rule.png
+[eclipse-run-configurations-application-idle]: images/eclipse-run-configurations-application-idle.png
+[eclipse-jmc-launch-with-workspace-plugins]: images/eclipse-jmc-launch-with-workspace-plugins.png
+[eclipse-jmc-jfr-recording-idle]: images/eclipse-jmc-jfr-recording-idle.png
+[eclipse-jmc-custom-rule-triggering]: images/eclipse-jmc-custom-rule-triggering.png
+[eclipse-plugin-project-export-rule]: images/eclipse-plugin-project-export-rule.png
+[eclipse-jmc-custom-pages]: images/eclipse-jmc-custom-pages.png
+[eclipse-jmc-rename-custom-page]: images/eclipse-jmc-rename-custom-page.png
+[eclipse-jmc-custom-page-filter-duration]: images/eclipse-jmc-custom-page-filter-duration.png
+[eclipse-jmc-custom-page-filter-duration-threshold]: images/eclipse-jmc-custom-page-filter-duration-threshold.png
+[eclipse-jmc-custom-page-view]: images/eclipse-jmc-custom-page-view.png
+[eclipse-jmc-request-log-ecid-grouping]: images/eclipse-jmc-request-log-ecid-grouping.png
+[eclipse-jmc-request-log-remove-type-filter]: images/eclipse-jmc-request-log-remove-type-filter.png
+[eclipse-jmc-request-log-context-menu-group-by-ecid]: images/eclipse-jmc-request-log-context-menu-group-by-ecid.png
+[eclipse-jmc-request-log-add-column]: images/eclipse-jmc-request-log-add-column.png
+[eclipse-jmc-request-log-view]: images/eclipse-jmc-request-log-view.png
+[eclipse-jmc-log4j-contention-show-search]: images/eclipse-jmc-log4j-contention-show-search.png
+[eclipse-jmc-log4j-contention-add-filter]: images/eclipse-jmc-log4j-contention-add-filter.png
+[eclipse-jmc-log4j-contention-combine-filter]: images/eclipse-jmc-log4j-contention-combine-filter.png
+[eclipse-jmc-log4j-contention-bug]: images/eclipse-jmc-log4j-contention-bug.png
+[eclipse-jmc-log4j-contention-add-grouping]: images/eclipse-jmc-log4j-contention-add-grouping.png
+[eclipse-jmc-management-console]: images/eclipse-jmc-management-console.png
+[eclipse-jmc-management-console-blank-chart]: images/eclipse-jmc-management-console-blank-chart.png
+[eclipse-jmc-management-console-thread-count]: images/eclipse-jmc-management-console-thread-count.png
+[eclipse-jmc-thread-count-freeze-graph]: images/eclipse-jmc-thread-count-freeze-graph.png
+[eclipse-jmc-mbean-browser]: images/eclipse-jmc-mbean-browser.png
+[eclipse-jmc-reset-to-default-controls]: images/eclipse-jmc-reset-to-default-controls.png
+[eclipse-jmc-thread-graph-deadlocked]: images/eclipse-jmc-thread-graph-deadlocked.png
+[eclipse-jmc-add-trigger]: images/eclipse-jmc-add-trigger.png
+[eclipse-jmc-trigger-alerts]: images/eclipse-jmc-trigger-alerts.png
+[eclipse-jmc-joverflow]: images/eclipse-jmc-joverflow.png
+[arrow]: images/arrow.png
+[eclipse-jmc-referer-tree]: images/eclipse-jmc-referer-tree.png
+[eclipse-jmc-reset-class-histogram]: images/eclipse-jmc-reset-class-histogram.png
+[eclipse-jmc-ancestor-referer]: images/eclipse-jmc-ancestor-referer.png
