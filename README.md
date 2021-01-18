@@ -64,10 +64,10 @@ You may also want to ensure that your newly setup JDK is being used for running 
 
 #### Adding the Eclipse plug-ins
 
-Next you will want to add the JMC plug-ins. Once JMC is released, this will be as simple as going to the Eclipse market place. For now, you will need to build them yourself. Install mercurial (if you don't already have it) and run the following command in the folder you wish to clone the JMC source:
+Next you will want to add the JMC plug-ins. You can either get the update site pre-built from AdoptOpenJDK (https://adoptopenjdk.net/jmc), or build it yourself. Install git (if you don't already have it) and run the following command in the folder you wish to clone the JMC source:
 
 ```bash
-hg clone http://hg.openjdk.java.net/jmc/jmc/
+git clone https://github.com/openjdk/jmc
 ```
 
 Follow the instructions in the README.md found in the root of the JMC repository on how to create and access the update sites for Eclipse.
